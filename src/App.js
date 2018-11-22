@@ -1,5 +1,5 @@
 import React from 'react';
-// import './App.css';
+import './App.css';
 import TestDiv from './components/TestDiv';
 import SelectableOption from './components/SelectableOption';
 
@@ -22,12 +22,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>        
+      <div>
         <SelectableOption
           caption="Hello World" id="FooBar"
-          handleClick={ this.handleSelection } 
+          handleClick={ this.handleSelection }
           isSelected={ this.state.isSelected }
-          
+
         />
       </div>
     );
