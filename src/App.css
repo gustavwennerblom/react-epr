@@ -1,0 +1,7 @@
+.selectable {
+  background-color: beige;
+}
+
+.selected {
+  background-color: blueviolet;
+}
