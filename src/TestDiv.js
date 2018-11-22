@@ -11,12 +11,13 @@ class TestDiv extends React.Component {
 
   render() {
     return (
-      <div>This is a test component { this.state.title }</div>
+      <div>This is an edited test component { this.state.title }</div>
     );
   }
 }
 
 const wrapper = document.getElementById('react-entry');
+// eslint-disable-next-line no-unused-expressions
 wrapper ? ReactDOM.render(<TestDiv />, wrapper) : false;
 
 export default TestDiv;
