@@ -14,6 +14,7 @@ module.exports = {
     'es6': true,
   },
   'rules': {
+    'require-unicode-regexp': 'off',
     'no-console': 'off',
     'linebreak-style': 'off',
     'no-extra-boolean-cast': 'off',
