@@ -1,0 +1,20 @@
+{
+    "title": "DefaultQuestionnaire",
+    "questions": [
+        {
+            "questionTitle": "How tall are you",
+            "options": ["<1.60", "1.60", "1.70", "1.80", ">1.80"]
+        },
+        {   
+            "questionTitle": "What's your highest education",
+            "options": [
+                "High school", 
+                "College", 
+                "Bachelor", 
+                "Master", 
+                "Post-doc"]
+        }
+    ]
+
+    
+}

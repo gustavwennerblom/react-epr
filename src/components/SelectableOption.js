@@ -1,5 +1,4 @@
 import React from 'react';
-// import { compose, setDisplayName, withHandlers } from 'recompose';
 import { Col } from 'reactstrap';
 
 const SelectableOption = ({
@@ -8,20 +7,11 @@ const SelectableOption = ({
   isSelected,
   // handlers
   handleClick,
-  id,
 }) => {
-  // console.log(`SelectableOption with id ${ id } has isSelected value ${ isSelected }`);
-  if (isSelected) {
-    return (
-      <Col
-        sm={ 2 } className="selectableOption selected"
-        onClick={ handleClick } id={ id }
-      >{ caption }</Col>);
-  }
   return (
     <Col
-      sm={ 2 } className="selectableOption"
-      onClick={ handleClick } id={ id }
+      sm={ 2 } className={ isSelected ? 'selectableOption selected' : 'selectableOption' }
+      onClick={ handleClick }
     >{ caption }</Col>);
 };
 
