@@ -6,5 +6,6 @@ module.exports = {
   ],
   'globals': {
     '__DEBUG__': true,
+    'test': true,
   },
 };
