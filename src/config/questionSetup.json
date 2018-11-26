@@ -13,6 +13,16 @@
                 "Bachelor", 
                 "Master", 
                 "Post-doc"]
+        },
+        {
+          "questionTitle": "What's your attitute toward dogs?",
+          "options": [
+            "Hate 'em",
+            "Allergic. Sorry...",
+            "Man's best friend",
+            "Love them",
+            "Best thing there is"
+          ]
         }
     ]
 
