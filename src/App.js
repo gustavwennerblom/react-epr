@@ -4,6 +4,7 @@ import './App.css';
 import OptionRow from './components/OptionRow';
 import questionSetup from './config/questionSetup.json';
 import { Container } from 'reactstrap';
+import ScoreDisplay from './components/ScoreDisplay';
 
 class App extends React.Component {
   constructor() {
@@ -47,6 +48,7 @@ class App extends React.Component {
       <Container className="wrapper">
         <h1>{ this.questionBase.title }</h1>
         { this.questionBase.questions.map((qObj, qIndex) => this.renderRow(qObj, qIndex))}
+        <ScoreDisplay selectedState={ this.state.isSelected } />
       </Container>
 
     );

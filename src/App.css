@@ -12,6 +12,10 @@ h1 {
   margin-bottom: 5px;
 }
 
+.padded-row {
+  padding: 20 0 20 0;
+}
+
 .selectableOption {
   background-color: #ffe0b2;
   border: 2px solid #ffe0b2;
