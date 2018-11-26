@@ -23,5 +23,6 @@ test('Invokes onClick', () => {
   )
   .find('.selectableOption')
   .simulate('click');
+  expect(_click).toBeCalled();
 });
 

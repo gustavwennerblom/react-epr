@@ -15,7 +15,7 @@ module.exports = {
   },
   'rules': {
     'require-unicode-regexp': 'off',
-    'no-console': 'off',
+    'no-console': 'warn',
     'linebreak-style': 'off',
     'no-extra-boolean-cast': 'off',
     'no-prototype-builtins': 'off',
