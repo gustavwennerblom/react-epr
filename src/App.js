@@ -8,19 +8,18 @@ class App extends React.Component {
     super();
     this.handleSelection = this.handleSelection.bind(this);
     this.state = {
-      title: 'My Title',
       isSelected: [false, false, false],
     };
   }
 
   handleSelection(index, ev) {
     console.log(index);
-    //console.log(ev.target.value);
-    const newSelected = this.state.isSelected;
-    newSelected.fill(false);
-    newSelected[index] = true;
-    this.setState({
-      isSelected: newSelected,
+    console.log(ev.target);
+    this.setState((prevState) => {
+      const newSelected = prevState.isSelected;
+      newSelected.fill(false);
+      newSelected[index] = true;
+      return ({isSelected: newSelected});
     });
   }
 
