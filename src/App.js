@@ -44,7 +44,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <Container className='wrapper'>
+      <Container className="wrapper">
         <h1>{ this.questionBase.title }</h1>
         { this.questionBase.questions.map((qObj, qIndex) => this.renderRow(qObj, qIndex))}
       </Container>
