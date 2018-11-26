@@ -10,9 +10,10 @@ const SelectableOption = ({
 }) => {
   return (
     <Col
-      sm={ 2 } className={ isSelected ? 'selectableOption selected' : 'selectableOption' }
-      onClick={ handleClick }
-    >{ caption }</Col>);
+      sm={ 2 } className={ isSelected ? 'selected selectableOption' : 'selectableOption' }
+      onClick={ handleClick } 
+    > { caption} </Col>
+  );
 };
 
 export default SelectableOption;

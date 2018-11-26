@@ -39,14 +39,15 @@ class App extends React.Component {
         questionTitle={ qObj.questionTitle } options={ qObj.options }
         qId={ rowIndex } key={ 'q' + rowIndex }
       />
-    )
+    );
   }
 
   render() {
     return (
       <div>
-        { this.questionBase.questions.map((qObj, qIndex) => this.renderRow(qObj, qIndex) )}
+        { this.questionBase.questions.map((qObj, qIndex) => this.renderRow(qObj, qIndex))}
       </div>
+
     );
   }
 }

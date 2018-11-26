@@ -20,7 +20,7 @@ const OptionRow = ({
   return (
     <Container>
       <Row>
-        <Col>{ questionTitle }</Col>
+        <Col sm={ 2  }>{ questionTitle }</Col>
         { selectedState.map((selected, optionIndex) => renderOption(selected, optionIndex)) }
       </Row>
     </Container>
