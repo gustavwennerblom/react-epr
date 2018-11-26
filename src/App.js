@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-import TestDiv from './components/TestDiv';
-import SelectableOption from './components/SelectableOption';
+import OptionRow from './components/OptionRow';
 
 class App extends React.Component {
   constructor() {
@@ -9,26 +8,25 @@ class App extends React.Component {
     this.handleSelection = this.handleSelection.bind(this);
     this.state = {
       title: 'My Title',
-      isSelected: false,
+      isSelected: [false, false, false],
     };
   }
 
-  handleSelection(ev) {
-    const currentSelected = this.state.isSelected;
+  handleSelection(index, ev) {
+    console.log(index);
+    //console.log(ev.target.value);
+    const newSelected = this.state.isSelected;
+    newSelected.fill(false);
+    newSelected[index] = true;
     this.setState({
-      isSelected: !currentSelected,
+      isSelected: newSelected,
     });
   }
 
   render() {
     return (
       <div>
-        <SelectableOption
-          caption="Hello World" id="FooBar"
-          handleClick={ this.handleSelection }
-          isSelected={ this.state.isSelected }
-
-        />
+        <OptionRow handleSelection={ this.handleSelection } selectedState={ this.state.isSelected } />
       </div>
     );
   }
