@@ -15,7 +15,6 @@ class App extends React.Component {
     for (let i = 0; i < this.questionBase.questions.length; i++) {
       initialSelectedArray[i] = Array(this.questionBase.questions[i].options.length).fill(false);
     }
-    console.log(initialSelectedArray);
     this.handleSelection = this.handleSelection.bind(this);
     this.state = {
       isSelected: initialSelectedArray,
