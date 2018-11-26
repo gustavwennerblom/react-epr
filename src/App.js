@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import OptionRow from './components/OptionRow';
 import questionSetup from './config/questionSetup.json';
+import { Container } from 'reactstrap';
 
 class App extends React.Component {
   constructor() {
@@ -44,9 +45,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <Container className='wrapper'>
+        <h1>{ this.questionBase.title }</h1>
         { this.questionBase.questions.map((qObj, qIndex) => this.renderRow(qObj, qIndex))}
-      </div>
+      </Container>
 
     );
   }

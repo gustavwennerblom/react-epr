@@ -1,7 +1,23 @@
+.wrapper {
+  padding: 20 10 20 10;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.optionRow {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .selectableOption {
-  background-color: beige;
+  background-color: #ffe0b2;
+  border: 2px solid #ffe0b2;
 }
 
 .selected {
-  background-color: blueviolet;
+  background-color: #ffb74d;
+  border: 2px solid #ef6c00;
 }

@@ -18,12 +18,10 @@ const OptionRow = ({
   };
 
   return (
-    <Container>
-      <Row>
-        <Col sm={ 2  }>{ questionTitle }</Col>
-        { selectedState.map((selected, optionIndex) => renderOption(selected, optionIndex)) }
-      </Row>
-    </Container>
+    <Row className='optionRow'>
+      <Col sm={ 2  }>{ questionTitle }</Col>
+      { selectedState.map((selected, optionIndex) => renderOption(selected, optionIndex)) }
+    </Row>  
   );
 };
 
