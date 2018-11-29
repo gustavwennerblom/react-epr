@@ -26,6 +26,28 @@
             "Love them",
             "Best thing there is"
           ]
+        },
+        {
+          "questionTitle": "Are you physically fit?",
+          "shortName": "Your workout",
+          "options": [
+            "Not since I was a goalkeeper in junior high",
+            "Ran to the subway once",
+            "Every now and then",
+            "At least twice a week",
+            "I can grate parmesan cheese on my abs"
+          ]
+        },
+        {
+          "questionTitle": "What are your addictions?",
+          "shortName": "Your personal discipline",
+          "options": [
+            "Women",
+            "Drugs and alcohol",
+            "Coffee and cigarettes",
+            "Work and workouts",
+            "I'm only addicted to love..."
+          ]
         }
     ]
 
