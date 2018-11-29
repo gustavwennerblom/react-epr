@@ -12,4 +12,10 @@ const scoreCalculator = (selectionArray) => {
   return scoreByQuestion;
 };
 
-export { completeReducer, scoreCalculator };
+const getTwoLowestIndices = (arr) => {
+  const smallestValue = Math.min.apply(0, arr);
+  const secondSmallestValue = Math.min.apply(0, arr.filter((n) => n !== smallestValue));
+  return ([arr.indexOf(smallestValue), arr.indexOf(secondSmallestValue)]);
+};
+
+export { completeReducer, scoreCalculator, getTwoLowestIndices };

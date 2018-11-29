@@ -1,15 +1,15 @@
-import { completeReducer, scoreCalculator } from './scoreReducer';
+import { completeReducer, scoreCalculator, getTwoLowestIndices } from './scoreReducer';
 
-const incompleteArray=[
+const incompleteArray = [
   [false, false, true, false],
   [false, true, false, false],
-  [false, false, false, false]
+  [false, false, false, false],
 ];
 
-const completeArray=[
+const completeArray = [
   [true, false, false],
   [false, true, false],
-  [false, false, true]
+  [false, false, true],
 ];
 
 test('Identifies incomplete state array', () => {
@@ -24,5 +24,10 @@ test('Identifies complete state array', () => {
 
 test('Calculates score correctly', () => {
   const result = scoreCalculator(completeArray);
-  expect(result).toEqual([1,2,3]);
+  expect(result).toEqual([1, 2, 3]);
+});
+
+test('Gets two lowest indices correctly', () => {
+  const result = getTwoLowestIndices(scoreCalculator(completeArray));
+  expect(result).toEqual([0, 1]);
 });
