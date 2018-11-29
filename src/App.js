@@ -23,8 +23,8 @@ class App extends React.Component {
   }
 
   handleSelection(qId, optionIndex, ev) {
-    console.log(qId, optionIndex);
-    console.log(ev.target);
+    // console.log(qId, optionIndex);
+    // console.log(ev.target);
     this.setState((prevState) => {
       const newSelected = prevState.isSelected;
       newSelected[qId].fill(false);
@@ -48,7 +48,7 @@ class App extends React.Component {
       <Container className="wrapper">
         <h1>{ this.questionBase.title }</h1>
         { this.questionBase.questions.map((qObj, qIndex) => this.renderRow(qObj, qIndex))}
-        <ScoreDisplay selectedState={ this.state.isSelected } />
+        <ScoreDisplay selectedState={ this.state.isSelected } questionBase={ this.questionBase } />
       </Container>
 
     );
