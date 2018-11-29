@@ -1,6 +1,6 @@
 import React from 'react';
 import SelectableOption from './SelectableOption';
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 
 const OptionRow = ({
   // props
@@ -18,10 +18,10 @@ const OptionRow = ({
   };
 
   return (
-    <Row className='optionRow'>
-      <Col sm={ 2  }>{ questionTitle }</Col>
+    <Row className="optionRow">
+      <Col sm={ 2 }>{ questionTitle }</Col>
       { selectedState.map((selected, optionIndex) => renderOption(selected, optionIndex)) }
-    </Row>  
+    </Row>
   );
 };
 

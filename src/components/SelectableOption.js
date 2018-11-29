@@ -11,7 +11,7 @@ const SelectableOption = ({
   return (
     <Col
       sm={ 2 } className={ isSelected ? 'selected selectableOption' : 'selectableOption' }
-      onClick={ handleClick } 
+      onClick={ handleClick }
     > { caption} </Col>
   );
 };

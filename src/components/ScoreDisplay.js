@@ -11,14 +11,14 @@ const ScoreDisplay = ({ selectedState, questionBase }) => {
   const mainMessage = isComplete ? `Your score is ${ totalScore }` : 'Awaiting answers...';
 
   const lowestScoreIndices = getTwoLowestIndices(scoreByQuestion);
-  
+
   const improvementAreas = ['foo', 'bar'];
-  
+
   if (isComplete) {
     improvementAreas[0] = questionBase.questions[lowestScoreIndices[0]].shortName;
     improvementAreas[1] = questionBase.questions[lowestScoreIndices[1]].shortName;
-  };
-  
+  }
+
   const improvementMessage = `You should focus on ${ improvementAreas[0].toLowerCase() } and ${ improvementAreas[1].toLowerCase() } to improve your chances`;
 
   return (

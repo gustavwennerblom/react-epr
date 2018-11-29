@@ -2,7 +2,7 @@
 // import TestDiv from './components/TestDiv';
 // import SelectableOption
 import React from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
 
 import App from './App';
 
