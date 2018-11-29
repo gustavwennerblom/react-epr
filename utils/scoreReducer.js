@@ -13,9 +13,11 @@ const scoreCalculator = (selectionArray) => {
 };
 
 const getTwoLowestIndices = (arr) => {
-  const smallestValue = Math.min.apply(0, arr);
-  const secondSmallestValue = Math.min.apply(0, arr.filter((n) => n !== smallestValue));
-  return ([arr.indexOf(smallestValue), arr.indexOf(secondSmallestValue)]);
+  let smallestValue = Math.min.apply(0, arr);
+  const smallestValueIndex = arr.indexOf(smallestValue);
+  arr[smallestValueIndex] = 99;     // Eliminate the smallets value, since it's index is already stored
+  const secondSmallestValue = Math.min.apply(0, arr);
+  return ([smallestValueIndex, arr.indexOf(secondSmallestValue)]);
 };
 
 export { completeReducer, scoreCalculator, getTwoLowestIndices };
