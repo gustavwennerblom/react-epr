@@ -1,5 +1,15 @@
-const ScoreReducer = (selectionArray) => {
-  selectionArray.reduce((total, value) => total || value);
+const completeReducer = (selectionArray) => {
+  const completionArray = selectionArray.map((subArray) => subArray.reduce((total, value) => total || value));
+  const isComplete = completionArray.reduce((total, value) => total && value);
+  return (isComplete);
 };
 
-export default ScoreReducer;
+const scoreCalculator = (selectionArray) => {
+  const scoreArray2D = selectionArray.map((answerArray) => answerArray.map((option, index) => {
+    return (option ? index + 1 : 0);
+  }));
+  const scoreByQuestion = scoreArray2D.map((arr) => Math.max(...arr));
+  return scoreByQuestion;
+};
+
+export { completeReducer, scoreCalculator };

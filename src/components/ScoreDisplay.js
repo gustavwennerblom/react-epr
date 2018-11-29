@@ -1,13 +1,14 @@
 import React from 'react';
 import { Row, Col, Card, CardText, CardBody, CardTitle } from 'reactstrap';
-import ScoreReducer from './../../utils/scoreReducer.js';
+import { completeReducer, scoreCalculator } from './../../utils/scoreReducer.js';
 
 const ScoreDisplay = ({ selectedState }) => {
-  let a = [false, true]
-  let score = ScoreReducer([false, true]);
-  let score2 = selectedState[0].reduce((total, value)=>total || value)
-  console.log(score);
-  console.log(score2);
+  const isComplete = completeReducer(selectedState);
+
+  const scoreByQuestion = scoreCalculator(selectedState);
+  const totalScore = scoreByQuestion.reduce((total, value) => total + value);
+
+  const message = isComplete ? `Your score is ${ totalScore }` : 'Awaiting answers...';
 
   return (
     <Row className="padded-row">
@@ -16,7 +17,7 @@ const ScoreDisplay = ({ selectedState }) => {
         <Card>
           <CardBody>
             <CardTitle>Your score</CardTitle>
-            <CardText>Fully done is</CardText>
+            <CardText>{ message }</CardText>
           </CardBody>
         </Card>
       </Col>
