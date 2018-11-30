@@ -15,5 +15,12 @@
       "script": "test",
       "problemMatcher": []
     },
+    {
+      "type": "npm",
+      "script": "build",
+      "problemMatcher": [
+        "$eslint-compact"
+      ]
+    }
   ]
 }
