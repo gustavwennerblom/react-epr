@@ -30,4 +30,7 @@ module.exports = {
       filename: './index.html',
     }),
   ],
+  output: {
+    filename: 'react-epr.js',
+  },
 };

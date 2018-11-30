@@ -6,6 +6,15 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 
-const wrapper = document.getElementById('react-entry');
-// eslint-disable-next-line no-unused-expressions
-wrapper ? ReactDOM.render(<App />, wrapper) : false;
+const runScript = () => {
+  // eslint-disable-next-line no-unused-expressions
+  ReactDOM.render(<App />, document.getElementById('react-entry'))
+};
+
+// `DOMContentLoaded` may fire before your script has a chance to run, so check before adding a listener
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', runScript);
+} else {
+  // `DOMContentLoaded` already fired
+  runScript();
+}
